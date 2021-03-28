@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProjectController;
+use App\Models\Interval;
+use App\Models\Resolution;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +25,9 @@ Route::get('projects', [ProjectController::class, 'index'])->name('projects');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::get('test', function(){
+    // return Resolution::all();
+    return Interval::all();
+});
