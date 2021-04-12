@@ -62,7 +62,7 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$set('showModal', false)" wire:loading.attr="disabled">
+            <x-jet-secondary-button wire:click="closeModal()" wire:loading.attr="disabled">
                 {{ __('Close') }}
             </x-jet-secondary-button>
 
@@ -82,7 +82,7 @@
                 <pre>{{ print_r($interval->toArray(), true) }}</pre>
             </x-slot>
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$set('showModal', false)" wire:loading.attr="disabled">
+            <x-jet-secondary-button wire:click="closeModal()" wire:loading.attr="disabled">
                 {{ __('Close') }}
             </x-jet-secondary-button>
 

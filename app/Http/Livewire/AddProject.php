@@ -17,7 +17,7 @@ class AddProject extends Component
     public ?string $selectedResolution = null;
     public $resolutions;
     public $intervals;
-    public string $selectedInterval = 'minutes:1';
+    public string $selectedInterval = 'minutes:15';
 
     public function mount()
     {
@@ -31,6 +31,16 @@ class AddProject extends Component
     {
         $this->selectedResolution = $selectedResolution;
         // 1920x1080,1280x720,1080x1920,1280x2276
+    }
+
+    public function closeModal()
+    {
+        $this->showModal = false;
+        $this->url = null;
+        $this->step = 1;
+        $this->selectedResolution = null;
+        $this->selectedInterval = 'minutes:15';
+
     }
 
     public function updatedUrl()
